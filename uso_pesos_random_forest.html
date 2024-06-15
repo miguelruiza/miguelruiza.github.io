@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso Pesos</title>
+
+    <script language="JavaScript">
+
+        // Cargar el archivo de pesos usando AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'RandomForest_hoy.model', true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var pesos = JSON.parse(xhr.responseText); // Suponiendo que los pesos están en formato JSON
+                // Utilizar los pesos en tu aplicación
+                console.log('Pesos cargados:', pesos);
+            }
+        };
+        xhr.send();
+
+    </script>
+
+
+
+</head>
+<body>
+    Holita
+</body>
+</html>
